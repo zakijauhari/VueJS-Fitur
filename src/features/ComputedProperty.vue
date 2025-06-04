@@ -1,29 +1,29 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Computed Property">
-      <p>Computed properties are cached based on their reactive dependencies and only re-evaluate when needed.</p>
+      <p>Computed properties di-cache berdasarkan ketergantungan reaktif dan hanya mengevaluasi ulang bila diperlukan.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh:</h3>
         
         <div class="form-group">
-          <label>First Name:</label>
+          <label>Nama Awal : </label>
           <input v-model="firstName" type="text" class="text-input">
         </div>
         
         <div class="form-group">
-          <label>Last Name:</label>
+          <label>Nama Akhir : </label>
           <input v-model="lastName" type="text" class="text-input">
         </div>
         
         <div class="result-box">
-          <h4>Full Name (Computed):</h4>
+          <h4>Nama Lengkap (Computed):</h4>
           <p>{{ fullName }}</p>
-          <p class="small-text">This updates automatically when either name changes</p>
+          <p class="small-text">Ini diperbarui secara otomatis ketika salah satu nama berubah</p>
         </div>
         
         <div class="form-group mt-4">
-          <label>Add Numbers:</label>
+          <label>Input Angka : </label>
           <input v-model.number="number1" type="number" class="text-input" style="width: 80px;">
           <span> + </span>
           <input v-model.number="number2" type="number" class="text-input" style="width: 80px;">
@@ -41,8 +41,8 @@ export default {
   components: { FeatureCard },
   data() {
     return {
-      firstName: 'John',
-      lastName: 'Doe',
+      firstName: 'Zaki',
+      lastName: 'Jauhari',
       number1: 0,
       number2: 0
     }

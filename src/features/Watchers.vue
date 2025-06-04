@@ -1,26 +1,26 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Watchers">
-      <p>Watchers allow you to perform asynchronous operations in response to changing data.</p>
-      
+      <p>Watchers memungkinkan Anda melakukan operasi asinkron sebagai respons terhadap perubahan data.</p>
+
       <div class="demo-section">
-        <h3>Example:</h3>
-        
+        <h3>Contoh : </h3>
+
         <div class="form-group">
-          <label>Ask a yes/no question:</label>
-          <input v-model="question" type="text" class="text-input" placeholder="Ask me anything...">
+          <label>Ajukan pertanyaan ya/tidak:</label>
+          <input v-model="question" type="text" class="text-input" placeholder="Tanyakan apa saja kepada saya...">
         </div>
-        
+
         <div class="answer-box" :class="{ thinking: isThinking }">
           <p v-if="answer">{{ answer }}</p>
-          <p v-else-if="isThinking">Thinking...</p>
-          <p v-else>Your answer will appear here</p>
+          <p v-else-if="isThinking">Berpikir...</p>
+          <p v-else>Jawaban Anda akan muncul di sini</p>
         </div>
-        
+
         <div class="form-group mt-4">
-          <label>Watch deep object:</label>
-          <input v-model="user.name" type="text" class="text-input" placeholder="Change name">
-          <p class="small-text">Check console for deep watch logs</p>
+          <label>Watch objek yang dalam : </label>
+          <input v-model="user.name" type="text" class="text-input" placeholder="Ubah nama">
+          <p class="small-text">Periksa Console Log untuk watch log</p>
         </div>
       </div>
     </FeatureCard>
@@ -44,14 +44,14 @@ export default {
     }
   },
   watch: {
-    // Watching a simple value
+    
     question(newQuestion, oldQuestion) {
       if (newQuestion.includes('?')) {
         this.getAnswer()
       }
     },
-    
-    // Deep watching an object
+
+   
     user: {
       handler(newVal, oldVal) {
         console.log('User changed:', newVal)
@@ -63,34 +63,34 @@ export default {
     async getAnswer() {
       this.isThinking = true
       this.answer = ''
-      
+
       try {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000))
-        
+
         const answers = [
-          'It is certain.',
-          'It is decidedly so.',
-          'Without a doubt.',
-          'Yes - definitely.',
-          'You may rely on it.',
-          'As I see it, yes.',
-          'Most likely.',
-          'Outlook good.',
-          'Yes.',
-          'Signs point to yes.',
-          'Reply hazy, try again.',
-          'Ask again later.',
-          'Better not tell you now.',
-          'Cannot predict now.',
-          'Concentrate and ask again.',
-          'Don\'t count on it.',
-          'My reply is no.',
-          'My sources say no.',
-          'Outlook not so good.',
-          'Very doubtful.'
+          'Sudah pasti.',
+          'Sudah pasti.',
+          'Tanpa keraguan.',
+          'Ya - pasti.',
+          'Anda dapat mengandalkannya.',
+          'Seperti yang saya lihat, ya.',
+          'Kemungkinan besar.',
+          'Prospeknya bagus.',
+          'Ya.',
+          'Tanda-tanda mengarah pada ya.',
+          'Jawabannya tidak jelas, coba lagi. ',
+          'Tanyakan lagi nanti.',
+          'Lebih baik tidak memberi tahu Anda sekarang.',
+          'Tidak bisa memprediksi sekarang.',
+          'Berkonsentrasi dan tanyakan lagi.',
+          'Jangan mengandalkannya.',
+          'Jawaban saya adalah tidak.',
+          'Sumber saya mengatakan tidak.',
+          'Prospeknya kurang bagus.',
+          'Sangat meragukan.'
         ]
-        
+
         this.answer = answers[Math.floor(Math.random() * answers.length)]
       } finally {
         this.isThinking = false

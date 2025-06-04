@@ -1,38 +1,38 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Conditional Rendering">
-      <p>Vue provides <code>v-if</code>, <code>v-else</code>, <code>v-else-if</code>, and <code>v-show</code> for conditional rendering.</p>
+      <p>Vue menyediakan <code>v-if</code>, <code>v-else </code>, <code>v-else-if</code>, dan <code>v-show</code> untuk conditional rendering.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh : </h3>
         
         <div class="button-group">
-          <button @click="currentView = 'A'" class="action-btn">Show A</button>
-          <button @click="currentView = 'B'" class="action-btn">Show B</button>
-          <button @click="currentView = 'C'" class="action-btn">Show C</button>
+          <button @click="currentView = 'A'" class="action-btn">Tampilkan A</button>
+          <button @click="currentView = 'B'" class="action-btn">Tampilkan B</button>
+          <button @click="currentView = 'C'" class="action-btn">Tampilkan C</button>
         </div>
         
         <div class="conditional-section">
           <div v-if="currentView === 'A'" class="conditional-block a">
-            <h4>Component A</h4>
-            <p>This is shown when A is selected</p>
+            <h4>Komponen A</h4>
+            <p>Ini ditampilkan apabila A dipilih</p>
           </div>
           <div v-else-if="currentView === 'B'" class="conditional-block b">
-            <h4>Component B</h4>
-            <p>This is shown when B is selected</p>
+            <h4>Komponen B</h4>
+            <p>Ini ditampilkan apabila B dipilih</p>
           </div>
           <div v-else class="conditional-block c">
-            <h4>Component C</h4>
-            <p>This is shown when C is selected</p>
+            <h4>Komponen C</h4>
+            <p>Ini ditampilkan apabila C dipilih</p>
           </div>
         </div>
         
         <div class="mt-4">
           <button @click="toggleShow" class="action-btn">
-            {{ showContent ? 'Hide' : 'Show' }} Content (v-show)
+            {{ showContent ? 'Sembunyikan' : 'Show' }} Konten (v-show)
           </button>
           <div v-show="showContent" class="conditional-block">
-            <p>This content is toggled with v-show (just changes display CSS property)</p>
+            <p>Konten ini diaktifkan dengan v-show (hanya mengubah tampilan properti CSS)</p>
           </div>
         </div>
       </div>

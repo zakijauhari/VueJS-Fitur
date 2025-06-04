@@ -1,12 +1,12 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Attribute Bindings">
-      <p>Vue uses the <code>v-bind</code> directive or <code>:</code> shorthand to dynamically bind attributes to expressions.</p>
+      <p>Vue menggunakan sistem <code>v-bind</code> directive atau <code>:</code> singkatan untuk mengikat atribut secara dinamis ke expression.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh:</h3>
         <div :class="{ active: isActive }" class="bindable-div">
-          This div's class is bound dynamically
+         Klik togel maka akan terjadi perubahan
         </div>
         <button @click="toggleActive" class="action-btn">
           Toggle Active Class

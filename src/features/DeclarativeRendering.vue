@@ -1,12 +1,12 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Declarative Rendering" highlight>
-      <p>Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.</p>
+      <p>Vue memperluas HTML standar dengan sintaks template yang memungkinkan kita mendeskripsikan keluaran HTML secara deklaratif berdasarkan status JavaScript.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh : </h3>
         <p>{{ message }}</p>
-        <button @click="reverseMessage" class="action-btn">Reverse Message</button>
+        <button @click="reverseMessage" class="action-btn">Pesan Terbalik</button>
       </div>
     </FeatureCard>
   </div>
@@ -19,7 +19,7 @@ export default {
   components: { FeatureCard },
   data() {
     return {
-      message: 'Hello Vue!'
+      message: 'Jaki Is Goodboy'
     }
   },
   methods: {

@@ -1,45 +1,45 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="Form Bindings">
-      <p>Vue provides <code>v-model</code> for two-way binding on form inputs.</p>
+      <p>Vue menyediakan <code>v-model</code> untuk two-way binding pada formulir input.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh : </h3>
         
         <div class="form-group">
-          <label>Text Input:</label>
+          <label>Masukkan Teks : </label>
           <input v-model="textValue" type="text" class="text-input">
-          <p>Value: {{ textValue }}</p>
+          <p>Nilai : {{ textValue }}</p>
         </div>
         
         <div class="form-group">
-          <label>Checkbox:</label>
+          <label>Centang Kotak : </label>
           <input v-model="checked" type="checkbox">
-          <p>Checked: {{ checked }}</p>
+          <p>Memeriksa : {{ checked }}</p>
         </div>
         
         <div class="form-group">
-          <label>Radio Buttons:</label>
+          <label>Radio Button : </label>
           <div>
             <input v-model="radioValue" type="radio" value="Option 1" id="option1">
-            <label for="option1">Option 1</label>
+            <label for="option1">Pilihan 1</label>
           </div>
           <div>
             <input v-model="radioValue" type="radio" value="Option 2" id="option2">
-            <label for="option2">Option 2</label>
+            <label for="option2">Pilihan 2</label>
           </div>
-          <p>Selected: {{ radioValue }}</p>
+          <p>Pilihan : {{ radioValue }}</p>
         </div>
         
         <div class="form-group">
-          <label>Select:</label>
+          <label>Pilih : </label>
           <select v-model="selectedOption" class="select-input">
-            <option disabled value="">Please select</option>
-            <option>Option A</option>
-            <option>Option B</option>
-            <option>Option C</option>
+            <option disabled value="">Silahkan pilih</option>
+            <option>Pilihan A</option>
+            <option>Pilihan B</option>
+            <option>Pilihan C</option>
           </select>
-          <p>Selected: {{ selectedOption }}</p>
+          <p>Pilihan : {{ selectedOption }}</p>
         </div>
       </div>
     </FeatureCard>

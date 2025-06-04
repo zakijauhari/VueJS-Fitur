@@ -1,14 +1,14 @@
 <template>
   <div class="feature-page">
     <FeatureCard title="List Rendering">
-      <p>Vue provides <code>v-for</code> for rendering lists of items.</p>
+      <p>Vue menyediakan <code>v-for</code> untuk rendering daftar item.</p>
       
       <div class="demo-section">
-        <h3>Example:</h3>
+        <h3>Contoh : </h3>
         
         <div class="form-group">
-          <input v-model="newItem" type="text" class="text-input" placeholder="Add new item" @keyup.enter="addItem">
-          <button @click="addItem" class="action-btn">Add Item</button>
+          <input v-model="newItem" type="text" class="text-input" placeholder="Tambahkan item baru" @keyup.enter="addItem">
+          <button @click="addItem" class="action-btn">Masukkan Item</button>
         </div>
         
         <ul class="item-list">
@@ -19,7 +19,7 @@
         </ul>
         
         <div class="mt-4">
-          <h4>Object Iteration:</h4>
+          <h4>Iterasi Objek : </h4>
           <ul class="object-list">
             <li v-for="(value, key) in user" :key="key">
               {{ key }}: {{ value }}
@@ -41,9 +41,9 @@ export default {
       newItem: '',
       items: ['Vue', 'Vite', 'JavaScript', 'HTML', 'CSS'],
       user: {
-        name: 'John Doe',
-        age: 30,
-        occupation: 'Developer'
+        Nama: 'Zaki Jauhari',
+        Umur: '21',
+        Pekerjaan: 'Developer'
       }
     }
   },
