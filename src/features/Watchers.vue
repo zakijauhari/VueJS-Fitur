@@ -38,7 +38,7 @@ export default {
       answer: '',
       isThinking: false,
       user: {
-        name: 'John',
+        name: 'Zaki',
         age: 30
       }
     }
